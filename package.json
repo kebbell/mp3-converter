@@ -1,0 +1,30 @@
+{
+  "name": "audio-stripper",
+  "version": "1.0.0",
+  "description": "Downloads videos and sends them back to client as audio files.",
+  "main": "server.js",
+  "scripts": {
+    "start": "docker build -t trizko/audio-stripper . && docker run -p 3000:3000 trizko/audio-stripper",
+    "test": "./node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trizko/audio-stripper.git"
+  },
+  "author": "Tony Rizko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trizko/audio-stripper/issues"
+  },
+  "homepage": "https://github.com/trizko/audio-stripper",
+  "dependencies": {
+    "bluebird": "^2.9.27",
+    "body-parser": "^1.9.3",
+    "express": "^4.10.4",
+    "express-handlebars": "^1.1.0"
+  },
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "mocha": "^2.2.5"
+  }
+}
